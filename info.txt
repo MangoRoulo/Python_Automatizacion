@@ -1,0 +1,9 @@
+Comandos
+
+pip install selenium
+
+Web Driver
+https://storage.googleapis.com/chrome-for-testing-public/127.0.6533.72/win64/chromedriver-win64.zip
+
+GekoDriver
+https://github.com/mozilla/geckodriver/releases
