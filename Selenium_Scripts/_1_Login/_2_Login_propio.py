@@ -14,29 +14,26 @@ driver = webdriver.Chrome(options=options)
 
 
 # Campos
-
-Email = "(//input[contains(@autocomplete,'off')])[2]"
-Adress = "//textarea[contains(@id,'currentAddress')]"
+Email = "/html[1]/body[1]/section[1]/div[2]/div[1]/div[1]/form[1]/div[1]/input[1]"
+Password = "/html[1]/body[1]/section[1]/div[2]/div[1]/div[1]/form[1]/div[2]/input[1]"
+Login = "/html[1]/body[1]/section[1]/div[2]/div[1]/div[1]/form[1]/button[1]"
 
 
 # Página Web
-driver.get("https://demoqa.com/text-box")
+driver.get("https://beta_inf.colegium.cloud")
 driver.maximize_window()
 time.sleep(2)
 
 # Acciones
-driver.find_element(By.XPATH, Name).send_keys("Steven")
+print("■■■■■-Empezar Inicio de Sesión-■■■■■")
+driver.find_element(By.XPATH, Email).send_keys("pormero@colegium.com")
 time.sleep(2)   
-driver.find_element(By.XPATH, Email).send_keys("sarias@colegium.com")
+driver.find_element(By.XPATH, Password).send_keys("Pop23725")
 time.sleep(2)   
-driver.find_element(By.XPATH, Adress).send_keys("Calle 38")
-time.sleep(2)  
-driver.find_element(By.XPATH, PermanentAdress).send_keys("# 24b - 185")
-time.sleep(2)  
-driver.find_element(By.XPATH, submit).click()
-time.sleep(2)  
+driver.find_element(By.XPATH, Login).click()
+time.sleep(2) 
+print("■■■■■-Finalizar Inicio de Sesión-■■■■■")
+
 
 # Cerrar el navegador
 driver.quit()   
-
-#prueba de cambio
